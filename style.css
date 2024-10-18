@@ -1,0 +1,129 @@
+/*My Preferences*/
+:root {
+    --prymary-color: #3c3c3c;
+    --prymary-color-transperent: rgba(60, 60, 60, 0.5);
+    --secondery-color: #222428;
+    --footer-header-color: #2e2e2e;
+    --footer-header-color-transperent: rgba(46, 46, 46, 0.7);
+    --brand-color: #ebdd3d;
+    --brand-color-transperent: rgba(235, 221, 61, 0.5);
+    --heading-font-size-part1: 2rem;
+    --heading-font-size-part2: clamp(2rem, 1.3333333333333333rem + 2.2222222222222223vw, 4rem);
+}
+
+/*Clear Everythings Before Start*/
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Adjust Body*/
+body {
+    min-height: 100vh;
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Making Look of Navbar on Desktop*/
+/*Navbar Paddings, BG Colors & Effects*/
+nav {
+    background-color: var(--footer-header-color-transperent);
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px 5px var(--brand-color-transperent);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/*<ul> Tag*/
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*Navbar Items Change Height*/
+nav li {
+    height: 50px;
+}
+
+/*Navbar Items Names*/
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/*Navbar Items Names on Mouse*/
+nav a:hover {
+    background-color: var(--brand-color-transperent);
+}
+
+/*Position LOGO to Left Side of Navbar*/
+nav li:first-child {
+    margin-right: auto;
+}
+
+/*Hide Menu Button*/
+.menu-button {
+    display: none;
+}
+
+/*Making Look of Navbar on Mobile Version*/
+/*Sidebar Look*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: var(--footer-header-color-transperent);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 -10px var(--brand-color-transperent);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/*Sidebar Items Look*/
+.sidebar li {
+    width: 100%;
+}
+
+/*Sidebar Items Names Look*/
+.sidebar a {
+    width: 100%;
+}
+
+/*Under 800px Change Everythings (Under 800px Devices)*/
+
+/*Show Sidebar*/
+/*Show Menu Button*/
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+/*Under 400px (On Mobile)*/
+
+/*Show Sidebar on Mobile*/
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
